@@ -1,6 +1,8 @@
 #!/bin/bash
 # Created by Parker Cranfield 24/12/2023
 
+PROJECT_NAME="RayLibTemplate"
+
 while getopts 'sbrh' OPTION; do
   case "$OPTION" in
     s)
@@ -38,7 +40,8 @@ while getopts 'sbrh' OPTION; do
         ;;
     r)
         echo "Attempting to run..."
-        ./build/RayLibTemplate
+
+        ./build/$PROJECT_NAME
         ;;
     h)
         echo "script usage: $(basename $0) [-s] (Setup dependancies/raylib) [-b] (Build/rebuild) [-r] (Run)" >&2
