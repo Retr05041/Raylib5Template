@@ -13,9 +13,9 @@ set(SOURCES
     src/main.cpp
 )
 
-add_executable(RayLibTemplate ${SOURCES})
+add_executable(${PROJECT_NAME} ${SOURCES})
 
-target_compile_options(RayLibTemplate PRIVATE
+target_compile_options(${PROJECT_NAME} PRIVATE
     -lraylib 
     -lGL 
     -lm 
@@ -25,4 +25,4 @@ target_compile_options(RayLibTemplate PRIVATE
     -lX11
 )
 
-target_link_libraries(RayLibTemplate PRIVATE raylib)
+target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
